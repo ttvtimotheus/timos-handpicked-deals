@@ -1,0 +1,20 @@
+{
+  "name": "timos-handpicked-deals",
+  "version": "1.0.0",
+  "description": "Discord bot for handpicked deals with RSS polling and interactive settings",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "discord.js": "^14.15.0",
+    "dotenv": "^16.4.5",
+    "rss-parser": "^3.13.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
