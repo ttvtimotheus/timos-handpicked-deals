@@ -2,16 +2,11 @@ services:
   bot:
     image: timos-handpicked-deals:latest
     build: .
-    container_name: timos-handpicked-deals
     restart: unless-stopped
     volumes:
       - ./data:/data
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
       - DB_PATH=/data/deals.db
-      - DISCORD_TOKEN
-      - DISCORD_CLIENT_ID
-      - MYDEALZ_FEED_URL
-      - HOTUKDEALS_FEED_URL
-      - AMAZON_TAG_DE
-      - AMAZON_TAG_UK
